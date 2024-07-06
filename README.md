@@ -11,10 +11,15 @@ This project aims to streamline financial analysis by automatically extracting a
 # Implementation 
 
 **PDF Data Extraction:** Utilizes Python libraries like PyPDF2 or pdfplumber to extract transaction details such as date, amount, and description from PhonePe PDF statements.
+
 **Data Cleaning and Processing:** Implements data cleaning techniques to handle inconsistencies and ensure accurate analysis. This involves parsing and structuring the extracted data for further processing.
+
 **Visualization with Charts:** Integrates data visualization libraries like Matplotlib or Plotly to generate interactive charts and graphs. These visualizations depict spending trends, transaction categories, and other financial insights.
+
 **User Interface Development:** Utilizes HTML and CSS for frontend development to create a user-friendly interface. Implements file upload functionalities and displays visualizations in a responsive manner for optimal user experience.
+
 **Data Analysis Features:** Implements algorithms and calculations to derive financial metrics such as total spending, average transaction amount, and categorical spending breakdowns. This provides users with comprehensive insights into their financial habits.
+
 **Integration and Deployment:** Ensures seamless integration of backend data processing with frontend UI components. May deploy the application on platforms like GitHub Pages or Heroku for accessibility and testing by users.
 
 
