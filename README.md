@@ -22,7 +22,23 @@ This project aims to streamline financial analysis by automatically extracting a
 
 **Integration and Deployment:** Ensures seamless integration of backend data processing with frontend UI components. May deploy the application on platforms like GitHub Pages or Heroku for accessibility and testing by users.
 
+# Visualization Specifications : 
 
+**Total Transcations**
+
+**Total Debits & Credits Amounts**
+
+**Transaction Amount Over Time**
+
+**Top 5 Receiver By Amount**
+
+**Top 5 Receiver By Counts**
+
+**Top 5 Products with Receiver**
+
+**Transcation Tree-Map**
+
+**etc...**
 ![Screenshot 2024-07-06 181031](https://github.com/SuprasannaVG/PhonePe-Transactions-Analysis-and-Visual-Insights-via-Transaction-PDF-Uploads/assets/125822020/75b7634a-4cfa-4d4e-bb29-1f46aa0f90bc)
 ![6c5d7434-b5a2-41f4-a845-78a3bc022be5](https://github.com/SuprasannaVG/PhonePe-Transactions-Analysis-and-Visual-Insights-via-Transaction-PDF-Uploads/assets/125822020/a5f146c3-bd49-4ce6-8d1f-6e909e6097d6)
 ![09c0d239-6c37-43ca-9a4f-934b20ff8d31](https://github.com/SuprasannaVG/PhonePe-Transactions-Analysis-and-Visual-Insights-via-Transaction-PDF-Uploads/assets/125822020/c0a3a6a1-6bfb-4556-a063-abfe6e19d013)
