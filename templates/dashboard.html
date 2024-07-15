@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PhonePe Transaction Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .container {
+            padding-top: 20px;
+            margin-left: 100px;
+            
+        }
+        .chart-container {
+            border: 1px solid #888282;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 30px;
+            gap: 10px;
+            width: 100%;
+            height: 600px;
+        }
+        .chart-container-small {
+            border: 1px solid #888282;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            gap: 10px;
+            height: 500px;
+           
+        }
+        .iconpe {
+            width: 70px;
+            height: 70px;
+        }
+        .text-center {
+            text-align: center;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><img src="/static/images/image.png" class="iconpe">Phone-Pe Transaction Analysis.</h1>
+        <div class="text-center mt-4">
+            <h4>Statement Period: {{ statement_period }}</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12 chart-container">
+                <!-- <h3>Total Transactions</h3> -->
+                <div id="gauge_chart">{{ gauge_chart|safe }}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 chart-container-small">
+                <!-- <h3>Pie Chart</h3> -->
+                <div id="pie_chart">{{ pie_chart|safe }}</div>
+            </div>
+            <div class="col-md-6 chart-container-small">
+                <!-- <h3>Bar Chart</h3> -->
+                <div id="bar_chart">{{ bar_chart|safe }}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 chart-container">
+                <!-- <h3>Line Chart</h3> -->
+                <div id="line_chart">{{ line_chart|safe }}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 chart-container-small">
+                <!-- <h3>Top 5 Receivers</h3> -->
+                <div id="top_receivers_chart">{{ top_receivers_chart|safe }}</div>
+            </div>
+            <div class="col-md-5 chart-container-small">
+                <div id="gauge_chart2">{{ gauge_chart2|safe }}</div>
+            </div>
+            
+            
+        </div>
+        <div class="row">
+            <div class="col-md-7 chart-container-small">
+                <div id="top_receivers_chart2">{{ top_receivers_chart2|safe }}</div>
+            </div>
+            <div class="col-md-5 chart-container-small">
+                <div id="gauge_chart3">{{ gauge_chart3|safe }}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 chart-container-small">
+                <div id="top_product">{{ top_product|safe }}</div>
+            </div>
+            <div class="col-md-5 chart-container-small">
+                <div id="advanced_chart">{{ advanced_chart|safe }}</div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12 chart-container-small">
+                <div id="treemap_chart">{{ treemap_chart|safe }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <button id="download-pdf" class="btn btn-primary">Download as PDF</button>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+       
+        function downloadPDF() {
+            const element = document.querySelector('.container'); 
+
+            
+            const opt = {
+                margin:       0.5,
+                filename:     'PhonePe_Transaction_Dashboard.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'a0', orientation: 'portrait' }
+            };
+
+            
+            html2pdf().from(element).set(opt).save();
+        }
+
+        
+        document.getElementById('download-pdf').addEventListener('click', downloadPDF);
+    </script>
+</body>
+</html>
